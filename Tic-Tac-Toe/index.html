@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Tic-Tac-Toe</title>
+</head>
+<body>
+  <main class="container">
+    <h1 class="title">Tic-Tac-Toe</h1>
+
+    <!-- Game board -->
+    <section id="board" class="board"></section>
+
+    <!-- Status + (in-game) reset -->
+    <p id="status" class="status">Player X’s turn</p>
+    <button id="resetBtn" class="reset-btn">Restart Game</button>
+  </main>
+
+  <!-- End-game overlay (hidden by default) -->
+  <section id="endScreen" class="end-screen hidden">
+    <div class="end-content">
+      <h2 id="resultText"></h2>
+      <button id="playAgainBtn" class="reset-btn">Play Again</button>
+    </div>
+  </section>
+
+  <!-- Win SFX (≈ 10 kB) -->
+  <audio id="winSound"
+         src="https://cdn.jsdelivr.net/gh/stevenlei-assets/sfx/win-short.mp3"
+         preload="auto"></audio>
+
+  <!-- Confetti library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js" defer></script>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

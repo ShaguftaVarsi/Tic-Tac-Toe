@@ -1,0 +1,78 @@
+/* --- reset & theme (unchanged) --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #101820;
+  --accent: #ffc107;
+  --square-bg: #1b2735;
+  --square-shadow: rgba(0, 0, 0, 0.25);
+  --font-main: "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--bg);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.container { text-align: center; width: 100%; max-width: 480px; }
+.title     { font-size: clamp(1.8rem, 5vw, 2.4rem); margin-bottom: 1rem; letter-spacing: 1px; }
+
+/* --- board & squares (unchanged) --- */
+.board {
+  --size: min(90vw, 90vh, 430px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-inline: auto;
+  width: var(--size);
+  height: var(--size);
+}
+
+.square {
+  background: var(--square-bg);
+  border: 2px solid #233044;
+  font-size: clamp(2.5rem, 9vmin, 5rem);
+  color: var(--accent);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s;
+  box-shadow: 0 2px 6px var(--square-shadow);
+}
+.square:hover:empty { background: #263549; }
+
+/* --- controls --- */
+.status    { margin-top: 1rem; font-size: 1.1rem; min-height: 1.8em; }
+.reset-btn { margin-top: 0.75rem; padding: 0.55rem 1.3rem; font-size: 0.95rem;
+             border: none; border-radius: 4px; background: var(--accent); color: #000;
+             font-weight: 600; cursor: pointer; transition: opacity 0.2s; }
+.reset-btn:hover  { opacity: 0.9; }
+.reset-btn:active { opacity: 0.8; }
+
+/* --- end-game overlay --- */
+.end-screen {
+  position: fixed; inset: 0;
+  background: rgba(16, 24, 32, 0.95);
+  display: flex; justify-content: center; align-items: center;
+  z-index: 50;
+  text-align: center;
+}
+.end-content { width: 90%; max-width: 340px; }
+#resultText { font-size: clamp(2rem, 6vw, 3rem); margin-bottom: 1.2rem; color: var(--accent); }
+
+/* utility */
+.hidden { display: none; }
+
+@media (max-height: 480px) {
+  body { padding: 0.5rem; }
+  .title { margin-bottom: 0.5rem; }
+}
