@@ -6,14 +6,6 @@ A fun game to play locally with friends!
 <h1 align="center">Tic-Tac-Toe — Responsive Web Game</h1>
 
 <p align="center">
-  <a href="https://tictactoeapp-project.tiiny.site/"><strong>Live Demo</strong></a> •
-  <a href="#Features">Features</a> •
-  <a href="#getting-started">Getting&nbsp;Started</a> •
-  <a href="#roadmap--ideas">Roadmap</a> •
-  <a href="#license">License</a>
-</p>
-
-<p align="center">
   <img src="https://github.com/user-attachments/assets/289b9f70-0287-4a9f-8669-4b66325f8730" alt="Tic-Tac-Toe Screenshot" width="360"/>
 </p>
 
