@@ -37,5 +37,6 @@ Open the live site 👉 **https://tictactoeapp-project.tiiny.site/**
 1. **Clone the repo**
 
    ```bash
-   git clone https://github.com/<your-username>/<repo-name>.git
-   cd <repo-name>
+   git clone https://github.com/ShaguftaVarsi/Tic-Tac-Toe.git
+   cd Tic-Tac-Toe
+   ./index.html
